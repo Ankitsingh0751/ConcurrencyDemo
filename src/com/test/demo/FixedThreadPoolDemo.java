@@ -14,7 +14,8 @@ public class FixedThreadPoolDemo {
 		//System.out.println(++henCount);
 		synchronized (this) {
 
-			System.out.println(henCount.incrementAndGet());
+			henCount.incrementAndGet();
+			System.out.println(henCount.get());
 		}
 	}
 	public static void main(String[] args) {
@@ -30,7 +31,7 @@ public class FixedThreadPoolDemo {
 				
 				
 			}
-			System.out.println("final count"+demo1.henCount.get());
+			
 		}
 		finally {
 			if (service!=null) service.shutdown();

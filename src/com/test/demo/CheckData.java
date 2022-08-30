@@ -20,7 +20,7 @@ public class CheckData {
 					CheckData.ctr++;
 				}
 			});
-			result.get(1,TimeUnit.NANOSECONDS);
+			result.get(1,TimeUnit.SECONDS);
 			System.out.println("Reached the data end");
 			
 			

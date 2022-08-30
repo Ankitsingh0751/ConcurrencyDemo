@@ -14,6 +14,7 @@ import java.util.stream.IntStream;
        private int total = 0;
        public void deposit(int value) {
           try {
+        	  
              vault.tryLock();
              total += value;
           } finally {

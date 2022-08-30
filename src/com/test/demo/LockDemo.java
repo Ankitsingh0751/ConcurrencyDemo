@@ -7,15 +7,21 @@ public class LockDemo {
 	
 	public static void printDetails(Lock lock) {
 		
-		try {
+	try {
 			lock.lock();
+			for(int i=0;i<1000;i++);
+			System.out.println("");
 			System.out.println("in printDetails");
-		}
-		finally 
-		{
+		
+	         
+	}
+	catch(Exception e) {
+		System.out.println("some exception");
+	}
+	finally {
 			System.out.println("unlocking  the lock ");
 			lock.unlock();
-		}
+	}
 	}
 	public static void main(String[] args) {
 		
@@ -23,12 +29,15 @@ public class LockDemo {
 		new Thread(()->printDetails(lock)).start();
 		if(lock.tryLock()) {
 			try {
+				
 			System.out.println("lock objtained , entering the monitor for further process");
 		}finally {
+			
 			lock.unlock();
 		}}
 		else {
 			System.out.println("unable to acquire lock ,doing some other task");
+			System.out.println("some other imp tasks ");
 		}
 		
 	}

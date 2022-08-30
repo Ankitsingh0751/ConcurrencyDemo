@@ -29,7 +29,7 @@ public class Account {
 		
 	}
 
-	 private double deposit(double amt) {
+	 private  double deposit(double amt) {
 		 return this.balance+=amt;
 	 }
 	 
@@ -41,4 +41,13 @@ public class Account {
 		 return this.balance;
 		 
 	 }
+	 public static void main(String[] args) throws ClassNotFoundException {
+		
+		 Class acc = Class.forName("Account");
+		 
+		 
+		 
+		 
+		 
+	}
 }

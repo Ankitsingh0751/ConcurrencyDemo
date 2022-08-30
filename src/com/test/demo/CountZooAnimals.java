@@ -7,7 +7,7 @@ import java.util.*;
        }
        public static void printResults(Future<?> f) {
           try {
-             System.out.println(f.get(1, TimeUnit.DAYS)); // o1
+             System.out.println(f.get(1, TimeUnit.SECONDS)); // o1
           } catch (Exception e) {
              System.out.println("Exception!");
           }
